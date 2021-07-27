@@ -7,7 +7,6 @@ router.get('/', (request, response) => response.json({ msg: 'Olá Sousa' }));
 
 router.post('/login', (request, response) => {
   const { login, password } = request.body;
-  console.log(login, password)
   if (!login) return response.status(400).json({ msg: 'Login é obrigatório.' })
   if (!password) return response.status(400).json({ msg: 'Senha é obrigatória.' })
 
