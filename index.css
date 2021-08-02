@@ -18,6 +18,23 @@ body{
   height: 100vh;
 }
 
+::-webkit-scrollbar {
+  width: 4.5px;
+  height: 4.5px;
+  background: transparent;
+}
+
+::-webkit-scrollbar-track {
+  width: 4.5px;
+  height: 4.5px;
+  transition: .5s;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--bg-sec-color);
+  border-radius: 10px;
+}
+
 header,
 main,
 .center_container,
@@ -37,23 +54,35 @@ header{
 
 }
 
-.header_title{
-  min-width: 20%;
-  min-height: 50%;
-
-  border: 4px solid white;
-  border-radius: 10px;
-
-  color: white;
-  font-size: 40px;
-  text-align: center;
-
+.title_container{
+  width: 20%;
+  min-width: 300px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.header_title_barrier{
+  height: 50px;
+  width: 2px;
+  background-color: white;
   user-select: none;
-  padding: 5px;
+}
+.header_title_icon{
+  font-size: 60px;
+  color: white;
+  user-select: none;
+}
+.header_title_text{
+  width: 20%;
+  color: white;
+  font-size: 20px;
+  font-weight: 800;
+  user-select: none;
 }
 
 .user_container{
   width: 25%;
+  min-width: 300px;
   height: 50%;
 
   display: flex;
@@ -69,11 +98,15 @@ header{
   width: 40%;
 }
 
-.user_state {
+.user_state, .user_state_id{
   color: white;
   font-size: 1rem;
   font-weight: 700;
 
+}
+
+.user_state_id{
+  transition: 0.5s;
 }
 
 .avatar{
@@ -94,13 +127,21 @@ main{
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  background-color: var(--bg-sec-color);
+
+  background: url(/assets/woods.png);
+  background-size: cover;
 
   padding: 0 200px;
 }
 
 .main_tittle{
   color: white;
+  background: var(--bg-sec-color);
+  opacity: 75%;
+
+  min-width: 300px;
+  border-radius: 10px;
+
   font-weight: 800;
   font-size: 30px;
 
@@ -114,13 +155,91 @@ main{
   align-items: center;
 }
 
-.post_container{
+.main_container{
+  min-width: 200px;
+  opacity: 95%;
+}
+
+.main_post_container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   height: 90%;
   flex: 0.35;
   background-color: var(--bg-color);
+  overflow: auto;
 }
 
-.login_container{
+.post_container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  width: 70%;
+  min-height: 150px;
+  max-height: 150px;
+  margin-top: 5px;
+
+  border: 2px solid var(--bg-sec-color);
+  border-radius: 5px;
+}
+
+.interaction_container{
+  width: 100%;
+  height: 5%;
+  background-color: var(--bg-sec-color);
+}
+
+.post_content{
+  height: fit-content;
+  max-height: 300px;
+  overflow: auto;
+  padding: 1rem;
+}
+
+.post_title{
+  font-size: 1.3rem;
+  color: white;
+  font-weight: 700;
+  font-family: sans-serif;
+
+  margin-bottom: .8rem;
+}
+
+
+.post_description{
+  font-size: 10px;
+  margin: 5px;
+  color: white;
+}
+
+.post_info_container{
+  height: 15%;
+  padding: 0 129px 0 3px;
+  min-width: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: var(--bg-sec-color);
+}
+
+.post_avatar{
+  height: 20px;
+  border: 0.1px solid var(--bg-color);
+  width: 20px;
+  border-radius: 50%;
+}
+
+.post_name{
+  font-size: 8px;
+  font-weight: 700;
+  color: white;
+}
+
+
+
+.main_login_container{
 
   display: flex;
   flex-direction: column;
@@ -130,11 +249,26 @@ main{
   flex: 0.35;
 }
 
-.login_container h1{
+.main_login_container h1{
   color: white;
   font-size: 20px; 
   text-align: center;
   margin: 50px 30px;
+  min-width: 100px;
+}
+
+.login_x_container{
+  width: 98%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.login_x_container a{
+  background-color: #7c0c0c;
+  padding: 2px;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
 }
 
 form{
@@ -142,6 +276,7 @@ form{
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-width: 200px;
 }
 
 form input{
@@ -218,4 +353,8 @@ form input:focus{
 
 .rodape_main_icon{
   font-size: 50px;
+}
+
+.fade_out{
+  opacity: 0;
 }

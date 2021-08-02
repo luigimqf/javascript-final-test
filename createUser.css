@@ -1,0 +1,113 @@
+:root{
+  font-size: 62.5%;
+
+  --bg-color: #242526;
+  --bg-sec-color: #18191A;
+  --bg-ter-color: #8e44ad;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body{
+  width: 100vw;
+  height: 100vh;
+}
+
+header,
+main,
+footer{
+  width: 100%;
+}
+
+header{
+  height: 15%;
+  padding: 5px 30px;
+
+  background-color: var(--bg-color);
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+
+}
+
+.header_title{
+  font-size: 80px;
+  color: white;
+}
+
+main{
+  height: 70%;
+  background: url(/assets/woods.jpg);
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form_container{
+  width: 23%;
+  min-width: 350px;
+  height: 75%;
+  background-color: var(--bg-color);
+  opacity: 96%;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px 0;
+}
+
+form input{
+  width: 60%;
+  outline: none;
+  margin: 10px;
+  padding: 4px;
+
+  text-align: center;
+  color: white;
+
+  background-color: transparent;
+
+  border:3px solid var(--bg-sec-color);
+  border-radius: 10px;
+
+  transition: 0.5s;
+}
+
+form input:focus{
+  border:3px solid var(--bg-ter-color);
+  background-color: var(--bg-sec-color);
+}
+
+.button_container{
+  display: flex;
+  justify-content: space-around;
+  width: 70%;
+}
+
+.button{
+  margin-top: 20px;
+  padding: 4px;
+  width: 40%;
+  
+  background-color: var(--bg-ter-color);
+  font-size: 12px;
+  color: white;
+  font-weight: 800;
+
+  border: none;
+  border-radius: 5px;
+
+  cursor: pointer;
+
+  transition: 0.5s;
+}
+

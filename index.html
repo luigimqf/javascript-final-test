@@ -6,15 +6,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home Page</title>
   <link rel="stylesheet" type="text/css" href="index.css">
+  <link rel="stylesheet" type="text/css" href="footer.css">
 
 </head>
 <body>
   <header>
-    <h1 class="header_title">Final Teste</h1>
+    <div class="title_container">
+      <h1 class="header_title_icon">&#9763;</h1>
+      <div class="header_title_barrier"></div>
+      <h1 class="header_title_text">Final Teste</h1>
+    </div>
     <div class="user_container">
       <div class="user_info_container">
-        <img src="/assets/user.png" class="avatar">
-        <p class="user_state">Visitante</p>
+        <img class="avatar">
+        <div>
+          <p class="user_state">Visitante</p>
+          <p class="user_state_id">Id:</p>
+
+        </div>
       </div>
       <button class="nav_login_button"></button>
     </div>
@@ -22,11 +31,11 @@
   <main>
     <h1 class="main_tittle">Welcome to Ruby's Book</h1>
     <div class="center_container">
-      <div class="post_container">
-  
+      <div class="main_container main_post_container">
       </div>
 
-      <div class="login_container">
+      <div class="main_container main_login_container">
+        <div class="login_x_container"><a class="x">X</a></div>
         <h1>Preencha as informações para se conectar</h1>
         <form class="login_form">
           <input class="login" name="login" type="text" placeholder="Login">
@@ -46,5 +55,6 @@
   </footer>
 
   <script src="index.js" ></script>
+  <script src="createUser.js" ></script>
 </body>
 </html>
